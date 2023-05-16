@@ -15,8 +15,8 @@ const user =  new UserManager({
   // },
 });
 
-
-(document.querySelector('#signin') as any).addEventListener('click', () => user.signinRedirect({ state: '1234'}));
+// Set accountID as the cognito public user.sub
+(document.querySelector('#signin') as any).addEventListener('click', () => user.signinRedirect({ state: { accountID: '999', registrationURL: 'hello'}}));
 (document.querySelector('#signinpopup') as any).addEventListener('click', () => user.signinPopup());
 
 

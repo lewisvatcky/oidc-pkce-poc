@@ -569,7 +569,10 @@ const $a196c1ed25598f0e$var$user = new $b4te3$oidcclientts.UserManager({
     response_mode: "query"
 });
 document.querySelector("#signin").addEventListener("click", ()=>$a196c1ed25598f0e$var$user.signinRedirect({
-        state: "1234"
+        state: {
+            accountID: "999",
+            registrationURL: "hello"
+        }
     }));
 document.querySelector("#signinpopup").addEventListener("click", ()=>$a196c1ed25598f0e$var$user.signinPopup());
 $a196c1ed25598f0e$var$user.signinCallback().then((user)=>{
